@@ -9,8 +9,7 @@ jobs:
       - name: Building Docker Image
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
-          # 下方的name格式为：Docker Hub ID/自定义镜像名称
-          name: yin2na/iwantfree
-          username: yin2na@126.com
-          password: yin2na2327077
-          registry: registry.cn-hongkong.aliyuncs.com
+          name: ${{ secrets.A_REPOSITORY }}
+          username: ${{ secrets.A_USER }}
+          password: ${{ secrets.A_PASSWORD }}
+          registry: ${{ secrets.A_REGISTRY }}
